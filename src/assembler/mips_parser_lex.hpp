@@ -2,9 +2,9 @@
 #define yyHEADER_H 1
 #define yyIN_HEADER 1
 
-#line 5 "src/assembler/mips_parser_lex.hpp"
+#line 6 "src/assembler/mips_parser_lex.hpp"
 
-#line 7 "src/assembler/mips_parser_lex.hpp"
+#line 8 "src/assembler/mips_parser_lex.hpp"
 
 #define  YY_INT_ALIGNED short int
 
@@ -472,6 +472,6 @@ extern int yylex (void);
 #line 93 "src/assembler/mips_assembler.l"
 
 
-#line 475 "src/assembler/mips_parser_lex.hpp"
+#line 476 "src/assembler/mips_parser_lex.hpp"
 #undef yyIN_HEADER
 #endif /* yyHEADER_H */

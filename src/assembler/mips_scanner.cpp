@@ -1,6 +1,6 @@
-#line 1 "src/assembler/mips_scanner.cpp"
+#line 2 "src/assembler/mips_scanner.cpp"
 
-#line 3 "src/assembler/mips_scanner.cpp"
+#line 4 "src/assembler/mips_scanner.cpp"
 
 #define  YY_INT_ALIGNED short int
 
@@ -606,9 +606,9 @@ extern "C"
   int yylex_destroy(void);
   int yylex( void );
 }
-#line 609 "src/assembler/mips_scanner.cpp"
+#line 610 "src/assembler/mips_scanner.cpp"
 /* TODO */
-#line 611 "src/assembler/mips_scanner.cpp"
+#line 612 "src/assembler/mips_scanner.cpp"
 
 #define INITIAL 0
 
@@ -825,7 +825,7 @@ YY_DECL
 	{
 #line 48 "src/assembler/mips_assembler.l"
 
-#line 828 "src/assembler/mips_scanner.cpp"
+#line 829 "src/assembler/mips_scanner.cpp"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -1051,7 +1051,7 @@ YY_RULE_SETUP
 #line 93 "src/assembler/mips_assembler.l"
 ECHO;
 	YY_BREAK
-#line 1054 "src/assembler/mips_scanner.cpp"
+#line 1055 "src/assembler/mips_scanner.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 

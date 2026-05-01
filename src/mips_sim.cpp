@@ -10,16 +10,15 @@
 #include <fstream>
 #include <cassert>
 #include <cstdio>
-#include <readline/readline.h>
-#include <readline/history.h>
+//#include <readline/readline.h>
+//#include <readline/history.h>
 #include <iomanip>
 #include <bitset>
 #include <memory>
 #include <vector>
 
-#ifdef _QT
-#include "interface/qt/mips_sim_gui.h"
-#include <QtWidgets/QApplication>
+#ifdef _IMGUI
+#include "interface/imgui/mips_sim_imgui.h"
 #endif
 
 #define MODE_RUN_BATCH       1
@@ -46,7 +45,7 @@ int run_batch(string input_file, int run_mode, int cpu_mode, ostream & outstream
 
 void print_help(const char * cmd)
 {
-#ifdef _QT
+#ifdef _IMGUI
   cerr << "GUI mode:" << endl;
   cerr << "  Call " << cmd << endl;
 #endif
@@ -87,7 +86,7 @@ int main(int argc, char * argv[])
   }
   else
   {
-#ifdef _QT
+#ifdef _IMGUI
     run_mode = MODE_RUN_GUI;
 #else
     run_mode = MODE_RUN_CLI;
@@ -111,14 +110,12 @@ int main(int argc, char * argv[])
   }
   else
   {
-#ifdef _QT
+#ifdef _IMGUI
     if (run_mode == MODE_RUN_GUI)
     {
-      /* QT GUI Interface */
-      QApplication a(argc, argv);
-      MipsSimGui w;
-      w.show();
-      return a.exec();
+      MipsSimImGui gui;
+      gui.run();
+      return EXIT_SUCCESS;
     }
     else
 #endif
